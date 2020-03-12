@@ -2,3 +2,10 @@
   padding: 0;
   margin: 0;
 }
+
+#centro {
+  width: 90%;
+  height: 100%;
+  background: #333;
+  margin: 0 auto;
+}
