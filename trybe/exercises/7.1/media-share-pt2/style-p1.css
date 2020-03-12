@@ -20,4 +20,8 @@
   #centro {
     width: 100%;
   }
+
+  #topo {
+    background: #ff0;
+  }
 }
