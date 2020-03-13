@@ -30,4 +30,8 @@
   #topo {
     background: #ff0;
   }
+
+  #topo h1 {
+    color: #f00;
+  }
 }
