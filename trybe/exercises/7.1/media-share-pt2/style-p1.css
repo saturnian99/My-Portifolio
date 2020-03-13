@@ -45,4 +45,10 @@
   #topo h1 {
     color: #f00;
   }
+  
+  .colunas2 {
+    width: 100%;
+    float: none;
+    background: #f00;
+  }
 }
