@@ -8,6 +8,7 @@
   height: 100%;
   background: #333;
   margin: 0 auto;
+  text-align: center;
 }
 
 #topo {
@@ -20,6 +21,16 @@
 #topo h1 {
   color: #fff;
   font-size: 2em;
+}
+
+.colunas2 {
+  width: 50%;
+  float: left;
+  background: #999;
+}
+
+#padding-colunas {
+  padding: 10px;
 }
 
 @media screen and (min-width: 320px) and (max-width: 568px) {
