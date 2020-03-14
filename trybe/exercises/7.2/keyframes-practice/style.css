@@ -1,3 +1,14 @@
 p {
-  opacity: 0;
+  /* opacity: 0; */
+  animation-name: fadein;
+  animation-duration: 3s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100%;
+  }
 }
