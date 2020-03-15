@@ -61,8 +61,14 @@
       animation-name: slideout;
       animation-duration: 5s;
     }
-    #exercise-4:hover{
+    #exercise-4:hover {
       animation-play-state: paused;
+    }
+    #exercise-5 {
+      animation: slideout 5s paused;
+    }
+    #section-5:hover > #exercise-5 {
+      animation-play-state: running;
     }
   </style>
 </head>
