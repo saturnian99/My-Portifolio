@@ -21,7 +21,7 @@
       padding: 5px;
     }
     .flex-direction__column { flex-direction: column; }
-    .justify-content__space-between { justify-content: space-between; }
+    .justify-content__space-between {justify-content: space-between; }
     .justify-content__center { justify-content: center; }
     .align-items__flex-start { align-items: flex-start; }
     .automatic-box-height { height: auto; }
@@ -35,41 +35,23 @@
       width: 50px;
       height: 50px;
     }
-    #exercise-1 {
-      animation-name: slideout;
-      animation-duration: 3s;
-      animation-delay: 1s;
-    }
     @keyframes slideout {
       from {margin-left: 0%;}
       to {margin-left: 87%;}
     }
-    #exercise-2 {
-      animation-name: slideout;
-      animation-delay: 2s;
-      animation-duration: 2s; 
-      animation-fill-mode: forwards;
+    @keyframes slidein {
+      from {margin-right: 0%;}
+      to {margin-right: 75%;}
     }
-    #exercise-3 {
-      animation-name: slideout;
-      animation-delay: 1s;
-      animation-duration: 1s;
-      animation-iteration-count: 2;
-      animation-direction: alternate;
-    }
-    #exercise-4 {
-      animation-name: slideout;
-      animation-duration: 5s;
-    }
-    #exercise-4:hover {
-      animation-play-state: paused;
-    }
-    #exercise-5 {
-      animation: slideout 5s paused;
-    }
-    #section-5:hover > #exercise-5 {
-      animation-play-state: running;
-    }
+    #exercise-1 {animation: slideout 3s 1s;}
+    #exercise-2 {animation: slideout 2s 2s forwards;}
+    #exercise-3 {animation: slideout 1s 1s 2 alternate;}
+    #exercise-4 {animation: slideout 5s paused;}
+    #exercise-4:hover {animation-play-state: running;}
+    #exercise-5 {animation: slideout 5s paused;}
+    #section-5:hover > #exercise-5 {animation-play-state: running;}
+    #exercise-6 {animation: slidein 5s paused;}
+    #exercise-6-square:hover + #exercise-6 {animation-play-state: running;}
   </style>
 </head>
 <body>
