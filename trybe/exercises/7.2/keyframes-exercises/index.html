@@ -49,6 +49,11 @@
     @keyframes paint {
       to {background-color: yellow;}
     }
+    @keyframes paintover {
+      33% {background-color: yellow;}
+      66% {background-color: blue;}
+      to {background-color: green;}
+    }
     #exercise-1 {animation: slideout 3s 1s;}
     #exercise-2 {animation: slideout 2s 2s forwards;}
     #exercise-3 {animation: slideout 1s 1s 2 alternate;}
@@ -60,6 +65,7 @@
     #exercise-6-square:hover + #exercise-6 {animation-play-state: running;}
     #exercise-7 {animation: grow 5s infinite alternate}
     #exercise-8 {animation: paint 4s;}
+    #exercise-9 {animation: paintover 4s infinite alternate;}
   </style>
 </head>
 <body>
