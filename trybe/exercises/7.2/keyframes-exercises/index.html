@@ -54,6 +54,9 @@
       66% {background-color: blue;}
       to {background-color: green;}
     }
+    @keyframes fadeout {
+      to {opacity: 0;}
+    }
     #exercise-1 {animation: slideout 3s 1s;}
     #exercise-2 {animation: slideout 2s 2s forwards;}
     #exercise-3 {animation: slideout 1s 1s 2 alternate;}
@@ -72,6 +75,8 @@
     #exercise-11_3 {animation: slideout 3s 2s infinite ease-in;}
     #exercise-11_4 {animation: slideout 3s 2s infinite ease;}
     #exercise-11_5 {animation: slideout 3s 2s infinite ease-in-out}
+    #exercise-12 {animation: fadeout 1s forwards paused;}
+    #exercise-12:active {animation-play-state: running;}
   </style>
 </head>
 <body>
