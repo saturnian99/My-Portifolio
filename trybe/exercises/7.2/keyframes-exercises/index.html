@@ -57,9 +57,12 @@
     @keyframes fadeout {
       to {opacity: 0;}
     }
+    @keyframes rotate {
+      to {transform: rotate(360deg);}
+    }
     #exercise-1 {animation: slideout 3s 1s;}
     #exercise-2 {animation: slideout 2s 2s forwards;}
-    #exercise-3 {animation: slideout 1s 1s 2 alternate;}
+    #exercise-3 {animation: slideout 1s 1s 2 alternate, rotate 0.6s infinite linear;}
     #exercise-4 {animation: slideout 5s paused;}
     #exercise-4:hover {animation-play-state: running;}
     #exercise-5 {animation: slideout 5s paused;}
@@ -93,7 +96,7 @@
     </li>
     <li>
       <section>
-        <div id="exercise-3" class="ball green medium"></div>
+        <img id="exercise-3" class="medium" src="https://images.vexels.com/media/users/3/144006/isolated/preview/713a44d7e5ecb2df243f0be638542e46-boomerang-icon-by-vexels.png" alt="A flying boomerang!">
       </section>
     </li>
     <li>
