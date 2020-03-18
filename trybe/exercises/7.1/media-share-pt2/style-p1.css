@@ -1,49 +1,48 @@
-* {
+body , html {
   padding: 0;
   margin: 0;
 }
 
-#centro {
+.centro {
   background: #333;
+  display: flex;
+  flex-wrap: wrap;
   height: 100%;
   margin: 0 auto;
   text-align: center;
   width: 90%;
 }
 
-#topo {
+.topo {
   background: #f00;
   height: 20%;
   text-align: center;
   width: 100%;
 }
 
-#topo h1 {
+.topo h1 {
   color: #fff;
   font-size: 2em;
 }
 
 .colunas2 {
   background: #999;
-  float: left;
+  flex: 1;
   height: 30%;
+  padding: 10px;
   width: 50%;
 }
 
-#padding-colunas {
-  padding: 10px;
-}
-
 @media screen and (min-width: 320px) and (max-width: 568px) {
-  #centro {
+  .centro {
     width: 100%;
   }
 
-  #topo {
+  .topo {
     background: #ff0;
   }
 
-  #topo h1 {
+  .topo h1 {
     color: #f00;
   }
   
