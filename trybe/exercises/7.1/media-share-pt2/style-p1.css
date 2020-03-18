@@ -3,7 +3,7 @@
   margin: 0;
 }
 
-#centro {
+.centro {
   background: #333;
   height: 100%;
   margin: 0 auto;
@@ -11,14 +11,14 @@
   width: 90%;
 }
 
-#topo {
+.topo {
   background: #f00;
   height: 20%;
   text-align: center;
   width: 100%;
 }
 
-#topo h1 {
+.topo h1 {
   color: #fff;
   font-size: 2em;
 }
@@ -30,7 +30,7 @@
   width: 50%;
 }
 
-#padding-colunas {
+.padding-colunas {
   padding: 10px;
 }
 
