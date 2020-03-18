@@ -4,18 +4,18 @@
 }
 
 #centro {
-  width: 90%;
-  height: 100%;
   background: #333;
+  height: 100%;
   margin: 0 auto;
   text-align: center;
+  width: 90%;
 }
 
 #topo {
-  width: 100%;
-  height: 20%;
   background: #f00;
+  height: 20%;
   text-align: center;
+  width: 100%;
 }
 
 #topo h1 {
@@ -24,10 +24,10 @@
 }
 
 .colunas2 {
-  width: 50%;
-  float: left;
   background: #999;
+  float: left;
   height: 30%;
+  width: 50%;
 }
 
 #padding-colunas {
@@ -48,9 +48,9 @@
   }
   
   .colunas2 {
-    width: 100%;
-    float: none;
     background: #f00;
+    float: none;
     margin-top: 5px;
+    width: 100%;
   }
 }
