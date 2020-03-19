@@ -67,3 +67,14 @@ console.log("\n========== Exercise 5 - List all objects inside a object ========
 mergeIn(allLessons, lesson1, lesson2, lesson3);
 
 // 6) Usando o objeto criado no exercício 5, crie uma função que retorne o número total de estudantes em todas as aulas.
+
+const sumValues = () => {
+  let sum = 0;
+  for (i in allLessons) {
+    sum += allLessons[i]["numeroEstudantes"];
+  }
+  console.log(sum);
+}
+
+console.log("\n========== Exercise 6 - Sum objects's values (student numbers) ==========\n");
+sumValues();
