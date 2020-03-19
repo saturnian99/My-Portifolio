@@ -40,3 +40,9 @@ listKeys(lesson2);
 
 // 3) Crie uma função para mostrar o tamanho de um objeto.
 
+const objLength = (object) => {console.log(`Object lenght: ${Object.keys(object).length}`);}
+
+console.log("\nExercise 3:\n");
+objLength(lesson2);
+
+// 4) Crie uma função para listar os valores de um objeto. Essa função deve receber um objeto como parâmetro.
