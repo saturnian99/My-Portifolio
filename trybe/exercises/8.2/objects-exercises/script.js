@@ -58,8 +58,8 @@ Cada chave desse novo objeto será uma aula, sendo essas chaves: lesson1, lesson
 */
 
 const allLessons = {};
-const mergeIn = (object, l1, l2, l3) => {
-  Object.assign(object, {l1}, {l2}, {l3});
+const mergeIn = (object, obj1, obj2, obj3) => {
+  Object.assign(object, {obj1}, {obj2}, {obj3});
   console.log(object);
 }
 
@@ -73,8 +73,22 @@ const sumValues = () => {
   for (i in allLessons) {
     sum += allLessons[i]["numeroEstudantes"];
   }
-  console.log(sum);
+  console.log(`The sum of all students: ${sum}`);
 }
 
 console.log("\n========== Exercise 6 - Sum objects's values (student numbers) ==========\n");
 sumValues();
+
+// 7) Crie uma função que obtenha o valor da chave de acordo com a sua posição no objeto. Por exemplo:
+
+const getValueByIndex = (object, index) => {
+  console.log(`Value of index ${index}: ${Object.values(object)[index]}`);
+}
+
+console.log("\n========== Exercise 7 - Get object's values by their index ==========\n");
+getValueByIndex(lesson2, 0);
+
+/*
+Crie uma função que verifique se o par (chave / valor) existem na função. 
+Essa função deve possuir três parâmetros, sendo eles: o objeto, o nome da chave e o valor da chave.
+*/
