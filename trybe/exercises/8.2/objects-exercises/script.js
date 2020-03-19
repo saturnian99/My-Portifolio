@@ -28,21 +28,42 @@ const addShift = (object, key, value) => {
   console.log(object); 
 }
 
-console.log("Exercise 1:\n");
+console.log("========== Exercise 1 - Add a value (manhã) ==========\n ");
 addShift(lesson2, "turno", "manhã");
 
 // 2) Crie uma função para listar as keys de um objeto. Essa função deve receber um objeto como parâmetro.
 
 const listKeys = (object) => {console.log(Object.keys(object));}
 
-console.log("\nExercise 2:\n");
+console.log("\n========== Exercise 2 - List object's keys ==========\n");
 listKeys(lesson2);
 
 // 3) Crie uma função para mostrar o tamanho de um objeto.
 
 const objLength = (object) => {console.log(`Object lenght: ${Object.keys(object).length}`);}
 
-console.log("\nExercise 3:\n");
+console.log("\n========== Exercise 3 - Return object's lenght ==========\n");
 objLength(lesson2);
 
 // 4) Crie uma função para listar os valores de um objeto. Essa função deve receber um objeto como parâmetro.
+
+const listValues = (object) => {console.log(Object.values(object));}
+
+console.log("\n========== Exercise 4 - List object's values ==========\n");
+listValues(lesson2);
+
+/*
+5) Crie um objeto de nome allLessons, que deve agrupar todas as aulas através do Object.assign. 
+Cada chave desse novo objeto será uma aula, sendo essas chaves: lesson1, lesson2 e lesson3.
+*/
+
+const allLessons = {};
+const mergeIn = (object, l1, l2, l3) => {
+  Object.assign(object, {l1}, {l2}, {l3});
+  console.log(object);
+}
+
+console.log("\n========== Exercise 5 - List all objects inside a object ==========\n");
+mergeIn(allLessons, lesson1, lesson2, lesson3);
+
+// 6) Usando o objeto criado no exercício 5, crie uma função que retorne o número total de estudantes em todas as aulas.
