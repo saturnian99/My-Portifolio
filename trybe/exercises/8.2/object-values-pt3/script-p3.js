@@ -12,3 +12,8 @@ const student2 = {
   SoftSkills: 'Ótimo',
   Git: 'Bom', // chave adicionada
 };
+
+const listValues = (student) => {console.log(Object.values(student))};
+
+listValues(student1);
+listValues(student2);
