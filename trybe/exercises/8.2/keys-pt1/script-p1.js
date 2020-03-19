@@ -6,8 +6,4 @@ const assignKey = (object, key, value) => {
   console.log(object);
 }
 
-const user = {};
-const keyName = "name"
-const name = "Jorge"
-
-assignKey(user, keyName, name);
+assignKey(wrestler = {}, "andHisNameIs", "Jonh Cena!");
