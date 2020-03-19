@@ -22,6 +22,10 @@ const getKeys= (student) => {
   for (i in keys) {
     console.log(`${keys[i]}, Nível: ${student[keys[i]]}`);
   }
+  console.log("\n");
 }
 
+console.log("Student #1:");
 getKeys(student1);
+console.log("Student #2");
+getKeys(student2);
