@@ -1,21 +1,21 @@
 const lesson1 = {
-  materia: 'Matemática',
+  materia: "Matemática",
   numeroEstudantes: 20,
-  professor: 'Maria Clara',
-  turno: 'manhã',
+  professor: "Maria Clara",
+  turno: "manhã",
 };
 
 const lesson2 = {
-  materia: 'História',
+  materia: "História",
   numeroEstudantes: 20,
-  professor: 'Carlos',
+  professor: "Carlos",
 };
 
 const lesson3 = {
-  materia: 'Matemática',
+  materia: "Matemática",
   numeroEstudantes: 10,
-  professor: 'Maria Clara',
-  turno: 'noite',
+  professor: "Maria Clara",
+  turno: "noite",
 };
 
 /* 
@@ -57,14 +57,11 @@ listValues(lesson2);
 Cada chave desse novo objeto será uma aula, sendo essas chaves: lesson1, lesson2 e lesson3.
 */
 
-const allLessons = {};
-const mergeIn = (object, obj1, obj2, obj3) => {
-  Object.assign(object, {obj1}, {obj2}, {obj3});
-  console.log(object);
-}
+const allLessons = Object.assign({}, {lesson1, lesson2, lesson3});
 
-console.log("\n========== Exercise 5 - List all objects inside a object ==========\n");
-mergeIn(allLessons, lesson1, lesson2, lesson3);
+console.log("\n========== Exercise 5 - Assign all objects inside a new object ==========\n");
+console.log(allLessons);
+
 
 // 6) Usando o objeto criado no exercício 5, crie uma função que retorne o número total de estudantes em todas as aulas.
 
@@ -89,6 +86,6 @@ console.log("\n========== Exercise 7 - Get object's values by their index ======
 getValueByIndex(lesson2, 0);
 
 /*
-Crie uma função que verifique se o par (chave / valor) existem na função. 
+8) Crie uma função que verifique se o par (chave / valor) existem na função. 
 Essa função deve possuir três parâmetros, sendo eles: o objeto, o nome da chave e o valor da chave.
 */
