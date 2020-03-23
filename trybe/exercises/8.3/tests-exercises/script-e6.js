@@ -4,4 +4,4 @@ const thereIs = '';
 
 // 6) Teste se uma variável foi definida.
 
-assert(thereIs != undefined, "Variable 'thereIs' not found!");
+assert(thereIs != undefined);
