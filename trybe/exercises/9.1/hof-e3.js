@@ -64,7 +64,7 @@ const books = [
 ];
 
 const expected_result = [
- {
+  {
     id: 1,
     name: 'As Crônicas de Gelo e Fogo',
     genre: 'Fantasia',
@@ -106,9 +106,14 @@ const expected_result = [
   },
 ]
 
-function fantasyOrScienceFiction() {
-  // escreva seu código aqui
-  
+function fantasyOrScienceFiction(objects) {
+  let array = [];
+  objects.filter((object) => {
+    if (object.genre == 'Ficção Científica' || object.genre == 'Fantasia') {
+      array.push(object);
+    };
+  });
+  return array;
 }
 
-assert.deepEqual(fantasyOrScienceFiction(), expected_result);
+assert.deepEqual(fantasyOrScienceFiction(books), expected_result);
