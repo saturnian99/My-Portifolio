@@ -8,7 +8,8 @@ const updateProducts = (products, prices) => {
 };
 
 const listProduct = updateProducts(products, prices);
-console.log(listProduct);
 
-
-updateProducts(products, prices);
+const assert = require('assert');
+const result = updateProducts(['Miojo', 'Banana'], [3.12]);
+const expected = [{ Miojo: 3.12 }, { Banana: undefined }];
+assert.deepEqual(result, expected);
