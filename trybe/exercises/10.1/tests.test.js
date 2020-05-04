@@ -7,6 +7,7 @@ const thereIs = require("./script-e6");
 const thereIsFunction = require("./script-e7");
 const change = require("./script-e8");
 const {obj1, obj2} = require("./script-e9");
+const isAbove = require("./script-e10");
 
 describe("sum", () => {
   it("should add two numbers", () => {
@@ -89,5 +90,12 @@ describe("change", () => {
 describe("obj1 and obj2", () => {
   it("the two objects should be deep equal", () => {
     expect(obj1).toEqual(obj2);
+  });
+});
+
+describe("isAbove", () => {
+  it("should return true if first number is bigger", () => {
+    expect(isAbove(1, 2)).toBeFalsy();
+    expect(isAbove(2, 1)).toBeTruthy();
   });
 });
