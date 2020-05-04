@@ -1,9 +1,3 @@
-const assert = require('assert');
+const change = (param) => !param;
 
-function change(param) {
-  return !param;
-}
-
-// 8) Utilize assert.ok() para testar uma condição
-
-assert.ok(!change(true));
+module.exports = change;

@@ -4,6 +4,8 @@ const mySum = require("./script-e3");
 const myRemove = require("./script-e4");
 const myFizzBuzz = require("./script-e5");
 const thereIs = require("./script-e6");
+const thereIsFunction = require("./script-e7");
+const change = require("./script-e8");
 
 describe("sum", () => {
   it("should add two numbers", () => {
@@ -68,5 +70,17 @@ describe("myFizzBuzz", () => {
 describe("thereIs", () => {
   it("variable 'thereIs' should be defined", () => {
     expect(thereIs).toBeDefined();
+  });
+});
+
+describe("thereIsFunction", () => {
+  it("funtion 'thereIs' should be defined", () => {
+    expect(thereIsFunction).toBeDefined();
+  });
+});
+
+describe("change", () => {
+  it("should return truthy", () => {
+    expect(!change(true)).toBeTruthy();
   });
 });
