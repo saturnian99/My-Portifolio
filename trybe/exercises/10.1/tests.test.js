@@ -6,6 +6,7 @@ const myFizzBuzz = require("./script-e5");
 const thereIs = require("./script-e6");
 const thereIsFunction = require("./script-e7");
 const change = require("./script-e8");
+const {obj1, obj2} = require("./script-e9");
 
 describe("sum", () => {
   it("should add two numbers", () => {
@@ -82,5 +83,11 @@ describe("thereIsFunction", () => {
 describe("change", () => {
   it("should return truthy", () => {
     expect(!change(true)).toBeTruthy();
+  });
+});
+
+describe("obj1 and obj2", () => {
+  it("the two objects should be deep equal", () => {
+    expect(obj1).toEqual(obj2);
   });
 });

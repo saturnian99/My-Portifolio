@@ -1,5 +1,3 @@
-const assert = require('assert');
-
 const obj1 = {
   title: 'My Title',
   description: 'My Description',
@@ -15,6 +13,4 @@ const obj3 = {
   description: 'My Description',
 };
 
-// 9) Compare dois objetos (JSON) para verificar se são idênticos ou não
-
-assert.deepEqual(obj1, obj2, "They're not equal!")
+module.exports = obj1, obj2;
