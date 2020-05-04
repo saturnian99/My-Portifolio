@@ -3,6 +3,7 @@ const myIndexOf = require("./script-e2");
 const mySum = require("./script-e3");
 const myRemove = require("./script-e4");
 const myFizzBuzz = require("./script-e5");
+const thereIs = require("./script-e6");
 
 describe("sum", () => {
   it("should add two numbers", () => {
@@ -62,4 +63,10 @@ describe("myFizzBuzz", () => {
   it("should return 'false' if input is NaN", () => {
     expect(myFizzBuzz('bug')).toBeFalsy();
   })
+});
+
+describe("thereIs", () => {
+  it("variable 'thereIs' should be defined", () => {
+    expect(thereIs).toBeDefined();
+  });
 });
