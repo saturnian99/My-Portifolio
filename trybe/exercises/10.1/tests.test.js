@@ -1,5 +1,6 @@
 const sum = require("./script-e1");
 const myIndexOf = require("./script-e2");
+const mySum = require("./script-e3");
 
 describe("sum", () => {
   it("should add two numbers", () => {
@@ -24,5 +25,12 @@ describe("myIndexOf", () => {
   });
   it("should return -1 if item was not found", () => {
     expect(myIndexOf([1, 2, 3, 4], 5)).toBe(-1);
+  });
+});
+
+describe("mySum", () => {
+  it("should sum all numbers", () => {
+    expect(mySum([1, 2, 3, 4])).toBe(10);
+    expect(mySum([1, -2, -3, 4])).toBe(0);
   });
 });
