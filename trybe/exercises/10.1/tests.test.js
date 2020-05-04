@@ -1,6 +1,8 @@
 const sum = require("./script-e1");
 const myIndexOf = require("./script-e2");
 const mySum = require("./script-e3");
+const myRemove = require("./script-e4");
+const myFizzBuzz = require("./script-e5");
 
 describe("sum", () => {
   it("should add two numbers", () => {
@@ -33,4 +35,31 @@ describe("mySum", () => {
     expect(mySum([1, 2, 3, 4])).toBe(10);
     expect(mySum([1, -2, -3, 4])).toBe(0);
   });
+});
+
+describe("myRemove", () => {
+  it("should remove a element from a array", () => {
+    expect(myRemove([1, 2, 3, 4], 3)).toEqual([1, 2, 4]);
+    expect(myRemove([1, 2, 3, 4], 3)).toEqual([1, 2, 4]);
+    expect(myRemove([1, 2, 3, 4])).toEqual([1, 2, 3, 4]);
+    expect(myRemove([1, 2, 3, 4], 5)).toEqual([1, 2, 3, 4]);
+  });
+});
+
+describe("myFizzBuzz", () => {
+  it("should return 'fizzbuzz' when number is divisible by both 3 and 5", () => {
+    expect(myFizzBuzz(15)).toBe("fizzbuzz");
+  });
+  it("should return 'fizz' if number is divisible only by 3", () => {
+    expect(myFizzBuzz(3)).toBe("fizz");
+  });
+  it("should return 'buzz' if number is divisible only by 5", () => {
+    expect(myFizzBuzz(5)).toBe("buzz");
+  })
+  it("should return the number if it's not divisible by 5 or 3", () => {
+    expect(myFizzBuzz(2)).toBe(2);
+  })
+  it("should return 'false' if input is NaN", () => {
+    expect(myFizzBuzz('bug')).toBeFalsy();
+  })
 });
