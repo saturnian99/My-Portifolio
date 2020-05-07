@@ -1,26 +1,37 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Order from './Order';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  render() {
+    const products = [
+      {
+        id: 102,
+        user: "cena@gmail.com",
+        product: "Razer Headphone",
+        price: {
+          value: 99.99,
+          currency: "dollars"
+        }
+      },
+      {
+        id: 77,
+        user: "cena@gmail.com",
+        product: "Monster 500mL",
+        price: {
+          value: 9.99,
+          currency: "dollars"
+        }
+      }
+    ];
+
+    return (
+      <div className="App">
+        <h1> Orders recently created </h1>
+        {products.map(order => <Order key={order.id} order={order} />)}
+      </div>
+    );
+  }
 }
 
 export default App;
