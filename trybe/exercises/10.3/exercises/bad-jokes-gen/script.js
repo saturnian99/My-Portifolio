@@ -16,7 +16,7 @@ const isOverEightThousand = () => {
       sum += Math.random() * 2500;
     }
 
-    if (sum < 80000) {
+    if (sum < 8000) {
       resolve(
         [sum / 2, sum / 3, sum / 5, sum / 10]
       );
@@ -25,9 +25,13 @@ const isOverEightThousand = () => {
   });
 };
 
-isOverEightThousand()
-  .then((result) => result)
-  .then((arr) => console.log(arr.reduce((acc, num) => acc + num, 0)))
-  .catch((message) => console.log(`Error: ${message}`));
+async function scouter() {
+  try {
+    const arr = await isOverEightThousand();
+    console.log(arr.reduce((acc, num) => acc + num, 0))
+  } catch (message) {
+    console.log(`Error: ${message}`);
+  }
+}
 
-window.onload = () => fetchJoke();
+scouter()
