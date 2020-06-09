@@ -1,18 +1,14 @@
 import React from 'react';
+import Pokemon from './Pokemon';
 
 class Pokedex extends React.Component {
   render() {
-    const { name, type, averageWeight: { value, measurementUnit }, image } = this.props.pokemon;
-
     return (
-      <div className="pokemon">
-        <p>
-          {name} <br/>
-          {type} <br/>
-          Average weight: {value + measurementUnit}
-        </p>
-        <img src={image} alt="Animated GIF of a pokemon." />
-      </div>
+      <section className="pokemon-list">
+        {this.props.pokemons.map(pokemon =>
+          <Pokemon key={pokemon.name} pokemon={pokemon} />
+        )}
+      </section>
     );
   };
 };

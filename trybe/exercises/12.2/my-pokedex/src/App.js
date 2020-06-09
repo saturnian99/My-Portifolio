@@ -6,7 +6,7 @@ import Pokedex from './Pokedex';
 function App() {
   return (
     <section className="pokemon-list">
-      {pokemons.map(pokemon => <Pokedex pokemon={pokemon} />)}
+      <Pokedex pokemons={pokemons} />
     </section>
   );
 }
