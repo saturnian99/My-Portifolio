@@ -5,9 +5,9 @@ import Pokedex from './Pokedex';
 
 function App() {
   return (
-    <div className="App">
+    <section className="pokemon-list">
       {pokemons.map(pokemon => <Pokedex pokemon={pokemon} />)}
-    </div>
+    </section>
   );
 }
 
