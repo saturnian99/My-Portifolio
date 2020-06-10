@@ -3,7 +3,7 @@ import React from 'react';
 class NextButton extends React.Component {
   render() {
     return (
-      <button>Próximo pokémon</button>
+      <button onClick={this.props.clickHandler}>Próximo pokémon</button>
     );
   };
 };
