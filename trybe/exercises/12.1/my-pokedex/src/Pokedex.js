@@ -12,9 +12,10 @@ class Pokedex extends React.Component {
     }
   }
 
-  changeIndex = (pokemons) => {
+  changePokemon = () => {
     const index = this.state.index;
-    const lastIndex = pokemons.length - 1;
+    const lastIndex = this.state.pokemons.length - 1;
+
     if (index < lastIndex) {
       this.setState({ index: index + 1, });
     } else {
@@ -34,10 +35,10 @@ class Pokedex extends React.Component {
     if (type !== this.state.type) {
       // change to first pokemon of type when changing types (buttons)
       this.setState(() => ({ index: 0, }))
-    } else {
+    } /* else {
       // if it's still in the same type, continue cycling
       this.changeIndex(pokemons); 
-    }
+    } */
 
     this.setState({ pokemons: pokemons, type, });
  
@@ -47,9 +48,10 @@ class Pokedex extends React.Component {
     return (
       <section className="pokemon-viewer">
         <Pokemon pokemon={this.state.pokemons[this.state.index]} />
-        <NextButton clickHandler={() => this.filterByType("All")} />
-        <NextButton clickHandler={() => this.filterByType("Fire")} />
-        <NextButton clickHandler={() => this.filterByType("Psychic")} />
+        <NextButton label="All" clickHandler={() => this.filterByType("All")} />
+        <NextButton label="Fire" clickHandler={() => this.filterByType("Fire")} />
+        <NextButton label="Psychic" clickHandler={() => this.filterByType("Psychic")} />
+        <NextButton label="Next Pokemon" clickHandler={this.changePokemon} />
       </section>
     );
   };
