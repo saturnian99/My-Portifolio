@@ -1,6 +1,6 @@
 import React from 'react';
 import Pokemon from './Pokemon';
-import NextButton from './NextButton';
+import Button from './NextButton';
 
 class Pokedex extends React.Component {
   constructor(props) {
@@ -48,10 +48,10 @@ class Pokedex extends React.Component {
     return (
       <section className="pokemon-viewer">
         <Pokemon pokemon={this.state.pokemons[this.state.index]} />
-        <NextButton label="All" clickHandler={() => this.filterByType("All")} />
-        <NextButton label="Fire" clickHandler={() => this.filterByType("Fire")} />
-        <NextButton label="Psychic" clickHandler={() => this.filterByType("Psychic")} />
-        <NextButton label="Next Pokemon" clickHandler={this.changePokemon} />
+        <Button label="All" clickHandler={() => this.filterByType("All")} />
+        <Button label="Fire" clickHandler={() => this.filterByType("Fire")} />
+        <Button label="Psychic" clickHandler={() => this.filterByType("Psychic")} />
+        <Button label="Next Pokemon" clickHandler={this.changePokemon} />
       </section>
     );
   };
