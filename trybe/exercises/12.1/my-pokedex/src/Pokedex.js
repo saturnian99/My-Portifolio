@@ -1,6 +1,6 @@
 import React from 'react';
 import Pokemon from './Pokemon';
-import Button from './NextButton';
+import Button from './Button';
 
 class Pokedex extends React.Component {
   constructor(props) {
@@ -14,7 +14,10 @@ class Pokedex extends React.Component {
 
   changePokemon = () => {
     const index = this.state.index;
-    const lastIndex = this.state.pokemons.length - 1;
+    const pokemonLength = this.state.pokemon.length;
+    const lastIndex = pokemonLength - 1;
+
+    /* if (pokemonLength === 1)  */
 
     if (index < lastIndex) {
       this.setState({ index: index + 1, });
@@ -31,7 +34,7 @@ class Pokedex extends React.Component {
         pokemon => pokemon.type === type
       );
     }
-    
+
     if (type !== this.state.type) {
       // change to first pokemon of type when changing types (buttons)
       this.setState(() => ({ index: 0, }))
@@ -41,7 +44,23 @@ class Pokedex extends React.Component {
     } */
 
     this.setState({ pokemons: pokemons, type, });
- 
+  }
+
+  createTypeButtons = (type) => {
+    return (
+      <Button key={type} label={type} clickHandler={() => this.filterByType(type)} />
+    );
+  }
+
+  fetchTypes = () => {
+    let types = [];
+
+    this.props.pokemons.forEach(({ type }) => {
+      if (types.includes(type)) return null;
+      types.push(type);
+    })
+
+    return types;
   }
 
   render() {
@@ -49,8 +68,7 @@ class Pokedex extends React.Component {
       <section className="pokemon-viewer">
         <Pokemon pokemon={this.state.pokemons[this.state.index]} />
         <Button label="All" clickHandler={() => this.filterByType("All")} />
-        <Button label="Fire" clickHandler={() => this.filterByType("Fire")} />
-        <Button label="Psychic" clickHandler={() => this.filterByType("Psychic")} />
+        {this.fetchTypes().map(type => this.createTypeButtons(type))}
         <Button label="Next Pokemon" clickHandler={this.changePokemon} />
       </section>
     );
