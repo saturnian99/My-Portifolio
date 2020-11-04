@@ -1,6 +1,5 @@
 // Aggregation Pipeline practice exercises:
 // 1) '$match' and '$limit' operators
-// creating 'transactions' collection first
 
 db.transactions.insertMany([
   { value: 5900, from: "Dave America", to: "Ned Flanders", bank: 'International' },
@@ -30,7 +29,6 @@ db.transactions.aggregate([
 ]);
 
 // 'let' and 'pipeline' parameters test
-// creating two collections first
 
 db.orders.insertMany([
   { _id: 1, item: "almonds", price: 12, ordered: 2 },
@@ -71,3 +69,45 @@ db.orders.aggregate([
 
 // 2) '$lookup' operator / 'let' and 'pipeline' parameters
 
+db.clients.insertMany([
+  { name: "Dave America", State: "Florida" },
+  { name: "Ned Flanders", State: "Alasca" },
+  { name: "Mark Zuck", State: "Texas" },
+  { name: "Edna Krabappel", State: "Montana" },
+  { name: "Arnold Schuz", State: "California" },
+  { name: "Lisa Simpson", State: "Florida" },
+  { name: "Barney Gumble", State: "Texas" },
+  { name: "Homer Simpson", State: "Florida" },
+]);
+
+db.clients.aggregate([
+  {
+    $lookup: {
+      from: "transactions",
+      localField: "name",
+      foreignField: "from",
+      as: "client_transactions"
+    }
+  }
+]).pretty();
+
+// for a more cleaner output
+
+db.clients.aggregate([
+  {
+    $lookup: {
+      from: "transactions",
+      let: { client_name: "$name" },
+      pipeline: [
+        {
+          $match: {
+            $expr: ["$from", "$$client_name"]
+          }
+        },
+        { $project: { _id: 0, from: 0 } }
+      ],
+      as: "client_transactions"
+    }
+  },
+  { $project: { _id: 0 } }
+]).pretty();
